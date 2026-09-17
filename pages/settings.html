@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Settings</title>
+
+    <link rel="stylesheet"
+          href="../css/teacher.css">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                👨‍🏫
+
+                <span>
+                    Teacher Panel
+                </span>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="teacher-dashboard.html"
+                   class="menu-item">
+
+                    🏠
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="daily-task.html"
+                   class="menu-item">
+
+                    📝
+                    <span>Daily Task</span>
+
+                </a>
+
+
+                <a href="task-history.html"
+                   class="menu-item">
+
+                    📋
+                    <span>Task History</span>
+
+                </a>
+
+
+                <a href="consequences.html"
+                   class="menu-item">
+
+                    ⚠️
+                    <span>Consequences</span>
+
+                </a>
+
+
+                <a href="settings.html"
+                   class="menu-item active">
+
+                    ⚙️
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <button
+                class="logout-button"
+                onclick="logout()">
+
+                🚪 Logout
+
+            </button>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+
+            <!-- HEADER -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <h1>
+                        Settings
+                    </h1>
+
+                    <p>
+                        Manage your teacher account settings.
+                    </p>
+
+                </div>
+
+
+                <div class="teacher-profile">
+
+                    👨‍🏫
+
+                    <span>
+                        Teacher
+                    </span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ACCOUNT SETTINGS -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        Account Settings
+                    </h2>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <h3>
+                        👤 Teacher Account
+                    </h3>
+
+                    <br>
+
+
+                    <label>
+                        User ID
+                    </label>
+
+                    <input
+                        type="text"
+                        value="teacher"
+                        readonly>
+
+
+                    <label>
+                        Account Type
+                    </label>
+
+                    <input
+                        type="text"
+                        value="Teacher"
+                        readonly>
+
+
+                    <p style="margin-top: 15px; color: #6b7280;">
+                        🔒 This account is authorized for Teacher Dashboard access.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- WEBSITE SETTINGS -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        ⚙️ Website Information
+                    </h2>
+
+                </div>
+
+
+                <div class="teacher-info-box">
+
+                    <p>
+                        <strong>Website:</strong>
+                        Smart Task Tracker
+                    </p>
+
+                    <p>
+                        <strong>Role:</strong>
+                        Teacher
+                    </p>
+
+                    <p>
+                        <strong>Access:</strong>
+                        Authorized Teacher
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Task History</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/teacher.css">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                📋
+
+                <span>
+                    Task History
+                </span>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="teacher-dashboard.html"
+                   class="menu-item">
+
+                    🏠
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="daily-task.html"
+                   class="menu-item">
+
+                    📝
+                    <span>Daily Task</span>
+
+                </a>
+
+
+                <a href="task-history.html"
+                   class="menu-item active">
+
+                    📋
+                    <span>Task History</span>
+
+                </a>
+
+
+                <a href="consequences.html"
+                   class="menu-item">
+
+                    ⚠️
+                    <span>Consequences</span>
+
+                </a>
+
+
+                <a href="settings.html"
+                   class="menu-item">
+
+                    ⚙️
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <button
+                class="logout-button"
+                onclick="logout()">
+
+                🚪 Logout
+
+            </button>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+
+            <!-- HEADER -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <h1>
+                        Task History
+                    </h1>
+
+                    <p>
+                        View all previous task records.
+                    </p>
+
+                </div>
+
+
+                <div class="teacher-profile">
+
+                    📋
+
+                    <span>
+                        Task Records
+                    </span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- FILTER -->
+
+            <section class="filter-section">
+
+                <div class="filter-box">
+
+                    <label for="historyFilter">
+                        Filter Tasks
+                    </label>
+
+                    <select id="historyFilter"
+                            onchange="filterTaskHistory()">
+
+                        <option value="all">
+                            All Tasks
+                        </option>
+
+                        <option value="completed">
+                            Completed
+                        </option>
+
+                        <option value="pending">
+                            Pending
+                        </option>
+
+                        <option value="missed">
+                            Missed
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-box">
+
+                    <label for="historyDate">
+                        Select Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="historyDate"
+                        onchange="filterTaskHistory()">
+
+                </div>
+
+            </section>
+
+
+
+            <!-- HISTORY TABLE -->
+
+            <section class="dashboard-section">
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Task
+                                </th>
+
+                                <th>
+                                    Deadline
+                                </th>
+
+                                <th>
+                                    Duration
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Consequence
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="historyTableBody">
+
+                            <!-- History will appear here -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- EMPTY MESSAGE -->
+
+            <section
+                id="emptyHistoryMessage"
+                class="empty-message">
+
+                📋 No task history found.
+
+            </section>
+
+
+
+            <!-- RULE -->
+
+            <section class="dashboard-section">
+
+                <div class="teacher-info-box">
+
+                    <h3>
+                        📌 Task Status
+                    </h3>
+
+                    <p>
+                        <strong>Completed:</strong>
+                        Student completed the task before the deadline.
+                    </p>
+
+                    <p>
+                        <strong>Pending:</strong>
+                        Task is still waiting to be completed.
+                    </p>
+
+                    <p>
+                        <strong>Missed:</strong>
+                        Deadline passed while the task was incomplete.
+                    </p>
+
+                    <p>
+                        A completed task will not receive a consequence.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/history.js"></script>
+
+    <script src="../js/task.js"></script>
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>

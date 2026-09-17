@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Consequences</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/teacher.css">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                👨‍🏫
+
+                <span>
+                    Teacher Panel
+                </span>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="teacher-dashboard.html"
+                   class="menu-item">
+
+                    🏠
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="daily-task.html"
+                   class="menu-item">
+
+                    📝
+                    <span>Daily Task</span>
+
+                </a>
+
+
+                <a href="task-history.html"
+                   class="menu-item">
+
+                    📋
+                    <span>Task History</span>
+
+                </a>
+
+
+                <a href="consequences.html"
+                   class="menu-item active">
+
+                    ⚠️
+                    <span>Consequences</span>
+
+                </a>
+
+
+                <a href="settings.html"
+                   class="menu-item">
+
+                    ⚙️
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <button
+                class="logout-button"
+                onclick="logout()">
+
+                🚪 Logout
+
+            </button>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+
+            <!-- HEADER -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <h1>
+                        Consequences
+                    </h1>
+
+                    <p>
+                        Create and manage custom consequences.
+                    </p>
+
+                </div>
+
+
+                <div class="teacher-profile">
+
+                    👨‍🏫
+
+                    <span>
+                        Teacher
+                    </span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ADD CONSEQUENCE -->
+
+            <section class="form-section">
+
+                <div class="form-card">
+
+                    <h2>
+                        ➕ Add Custom Consequence
+                    </h2>
+
+
+                    <!-- CONSEQUENCE -->
+
+                    <div class="form-group">
+
+                        <label for="consequenceName">
+                            Consequence
+                        </label>
+
+                        <input
+                            type="text"
+                            id="consequenceName"
+                            placeholder="Example: 20 Squats">
+
+                    </div>
+
+
+
+                    <!-- DURATION / COUNT -->
+
+                    <div class="form-group">
+
+                        <label for="consequenceValue">
+                            Duration / Count
+                            <span class="optional">
+                                (Optional)
+                            </span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="consequenceValue"
+                            placeholder="Example: 20 or 10 minutes">
+
+                    </div>
+
+
+
+                    <!-- ADD BUTTON -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            class="save-task-btn"
+                            onclick="addConsequence()">
+
+                            ➕ Add Consequence
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="clear-btn"
+                            onclick="clearConsequenceForm()">
+
+                            Clear
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <p
+                        id="consequenceMessage"
+                        class="task-message">
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- CONSEQUENCE LIST -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            My Consequences
+                        </h2>
+
+                        <p>
+                            Custom consequences created by the teacher.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="consequenceList"
+                    class="consequence-list">
+
+                    <!-- Consequences will appear here -->
+
+                </div>
+
+            </section>
+
+
+
+            <!-- RULE -->
+
+            <section class="dashboard-section">
+
+                <div class="teacher-info-box">
+
+                    <h3>
+                        ⚠️ Important Rule
+                    </h3>
+
+                    <p>
+                        A consequence is not automatically given when
+                        a task is created.
+                    </p>
+
+                    <p>
+                        If the student completes the task before the
+                        deadline, no consequence is added.
+                    </p>
+
+                    <p>
+                        If the deadline passes while the task is
+                        incomplete, the teacher can select an appropriate
+                        consequence.
+                    </p>
+
+                    <p>
+                        Duration / Count is optional.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/consequence.js"></script>
+
+    <script src="../js/teacher.js"></script>
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>

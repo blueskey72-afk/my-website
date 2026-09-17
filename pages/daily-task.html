@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Create Daily Task</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/teacher.css">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                👨‍🏫
+
+                <span>
+                    Teacher Panel
+                </span>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="teacher-dashboard.html"
+                   class="menu-item">
+
+                    🏠
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="daily-task.html"
+                   class="menu-item active">
+
+                    📝
+                    <span>Daily Task</span>
+
+                </a>
+
+
+                <a href="task-history.html"
+                   class="menu-item">
+
+                    📋
+                    <span>Task History</span>
+
+                </a>
+
+
+                <a href="consequences.html"
+                   class="menu-item">
+
+                    ⚠️
+                    <span>Consequences</span>
+
+                </a>
+
+
+                <a href="settings.html"
+                   class="menu-item">
+
+                    ⚙️
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <button
+                class="logout-button"
+                onclick="logout()">
+
+                🚪 Logout
+
+            </button>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+
+            <!-- HEADER -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <h1>
+                        Create Daily Task
+                    </h1>
+
+                    <p>
+                        Create a task for the student.
+                    </p>
+
+                </div>
+
+
+                <div class="teacher-profile">
+
+                    👨‍🏫
+
+                    <span>
+                        Teacher
+                    </span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- TASK FORM -->
+
+            <section class="form-section">
+
+                <div class="form-card">
+
+                    <h2>
+                        📝 Task Details
+                    </h2>
+
+
+                    <!-- TASK TITLE -->
+
+                    <div class="form-group">
+
+                        <label for="taskTitle">
+                            Task Title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="taskTitle"
+                            placeholder="Enter task title">
+
+                    </div>
+
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="form-group">
+
+                        <label for="taskDescription">
+                            Task Description
+                        </label>
+
+                        <textarea
+                            id="taskDescription"
+                            rows="4"
+                            placeholder="Enter task details"></textarea>
+
+                    </div>
+
+
+
+                    <!-- DATE -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="taskDate">
+                                Task Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="taskDate">
+
+                        </div>
+
+
+
+                        <!-- DEADLINE -->
+
+                        <div class="form-group">
+
+                            <label for="taskDeadline">
+                                Deadline
+                            </label>
+
+                            <input
+                                type="datetime-local"
+                                id="taskDeadline">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DURATION -->
+
+                    <div class="form-group">
+
+                        <label for="taskDuration">
+                            Duration (minutes)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="taskDuration"
+                            min="1"
+                            placeholder="Example: 30">
+
+                        <small>
+                            Enter the time allowed to complete the task.
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- SAVE BUTTON -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            class="save-task-btn"
+                            onclick="createTask()">
+
+                            💾 Save Task
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="clear-btn"
+                            onclick="clearTaskForm()">
+
+                            Clear
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- MESSAGE -->
+
+                    <p
+                        id="taskMessage"
+                        class="task-message">
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- TASK RULE -->
+
+            <section class="dashboard-section">
+
+                <div class="teacher-info-box">
+
+                    <h3>
+                        📌 Task Rule
+                    </h3>
+
+                    <p>
+                        Teacher will create the task with a date,
+                        deadline and duration.
+                    </p>
+
+                    <p>
+                        The student must complete the task before
+                        the deadline.
+                    </p>
+
+                    <p>
+                        If the student completes the task on time,
+                        <strong>no consequence will be added.</strong>
+                    </p>
+
+                    <p>
+                        If the deadline passes and the task is still
+                        incomplete, the teacher can decide whether
+                        a consequence should be added.
+                    </p>
+
+                    <p>
+                        Custom consequences are managed separately
+                        from the <strong>Consequences</strong> page.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/task.js"></script>
+
+    <script src="../js/teacher.js"></script>
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>

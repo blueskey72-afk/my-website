@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/student.css">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                🎓
+
+                <span>
+                    Student Panel
+                </span>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="student-dashboard.html"
+                   class="menu-item active">
+
+                    🏠
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="task-history.html"
+                   class="menu-item">
+
+                    📋
+                    <span>Task History</span>
+
+                </a>
+
+
+                <a href="consequences.html"
+                   class="menu-item">
+
+                    ⚠️
+                    <span>My Consequences</span>
+
+                </a>
+
+
+                <a href="settings.html"
+                   class="menu-item">
+
+                    ⚙️
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <button
+                class="logout-button"
+                onclick="logout()">
+
+                🚪 Logout
+
+            </button>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+
+            <!-- HEADER -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <h1>
+                        Student Dashboard
+                    </h1>
+
+                    <p>
+                        View your tasks and complete them before the deadline.
+                    </p>
+
+                </div>
+
+
+                <div class="student-profile">
+
+                    🎓
+
+                    <span>
+                        Student
+                    </span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- NOTIFICATION -->
+
+            <section class="notification-section">
+
+                <div
+                    id="notificationBox"
+                    class="notification-box">
+
+                    🔔
+                    <span>
+                        Loading notifications...
+                    </span>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- TASK SUMMARY -->
+
+            <section class="stats-container">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Tasks
+                        </p>
+
+                        <h2 id="studentTotalTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ⏳
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Pending
+                        </p>
+
+                        <h2 id="studentPendingTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ✅
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Completed
+                        </p>
+
+                        <h2 id="studentCompletedTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ⚠️
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Missed
+                        </p>
+
+                        <h2 id="studentMissedTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- TODAY'S TASKS -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            My Tasks
+                        </h2>
+
+                        <p>
+                            Complete your tasks before the deadline.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Task
+                                </th>
+
+                                <th>
+                                    Description
+                                </th>
+
+                                <th>
+                                    Deadline
+                                </th>
+
+                                <th>
+                                    Time Remaining
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="studentTaskTableBody">
+
+                            <!-- Tasks will appear here -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- IMPORTANT RULE -->
+
+            <section class="dashboard-section">
+
+                <div class="student-info-box">
+
+                    <h3>
+                        📌 Task Rule
+                    </h3>
+
+                    <p>
+                        Complete your task before the deadline.
+                    </p>
+
+                    <p>
+                        If the task is completed on time,
+                        <strong>no consequence will be added.</strong>
+                    </p>
+
+                    <p>
+                        If the deadline passes while the task is still
+                        incomplete, the assigned consequence will be added.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/task.js"></script>
+
+    <script src="../js/student.js"></script>
+
+    <script src="../js/login.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Dashboard</title>
+
+   <!--  <link rel="stylesheet"
+          href="../css/style.css"> -->
+
+    <link rel="stylesheet"
+          href="../css/teacher.css">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-container">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+                👨‍🏫
+
+                <span>
+                    Teacher Panel
+                </span>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="teacher-dashboard.html"
+                   class="menu-item active">
+
+                    🏠
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="daily-task.html"
+                   class="menu-item">
+
+                    📝
+                    <span>Daily Task</span>
+
+                </a>
+
+
+                <a href="task-history.html"
+                   class="menu-item">
+
+                    📋
+                    <span>Task History</span>
+
+                </a>
+
+
+                <a href="consequences.html"
+                   class="menu-item">
+
+                    ⚠️
+                    <span>Consequences</span>
+
+                </a>
+
+
+                <a href="settings.html"
+                   class="menu-item">
+
+                    ⚙️
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <button
+                class="logout-button"
+                onclick="logout()">
+
+                🚪 Logout
+
+            </button>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+
+            <!-- TOP HEADER -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <h1>
+                        Teacher Dashboard
+                    </h1>
+
+                    <p>
+                        Manage your student's tasks and deadlines.
+                    </p>
+
+                </div>
+
+
+                <div class="teacher-profile">
+
+                    👨‍🏫
+
+                    <span>
+                        Teacher
+                    </span>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- STAT CARDS -->
+
+            <section class="stats-container">
+
+
+                <!-- TOTAL TASK -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Tasks
+                        </p>
+
+                        <h2 id="totalTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- COMPLETED -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ✅
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Completed
+                        </p>
+
+                        <h2 id="completedTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PENDING -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ⏳
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Pending
+                        </p>
+
+                        <h2 id="pendingTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MISSED -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ⚠️
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Missed
+                        </p>
+
+                        <h2 id="missedTasks">
+                            0
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- QUICK ACTIONS -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        Quick Actions
+                    </h2>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+
+                    <a href="daily-task.html"
+                       class="action-card">
+
+                        <div class="action-icon">
+                            📝
+                        </div>
+
+                        <h3>
+                            Create Task
+                        </h3>
+
+                        <p>
+                            Give a new task to the student.
+                        </p>
+
+                    </a>
+
+
+
+                    <a href="consequences.html"
+                       class="action-card">
+
+                        <div class="action-icon">
+                            ⚠️
+                        </div>
+
+                        <h3>
+                            Manage Consequences
+                        </h3>
+
+                        <p>
+                            Add and view custom consequences.
+                        </p>
+
+                    </a>
+
+
+
+                    <a href="task-history.html"
+                       class="action-card">
+
+                        <div class="action-icon">
+                            📋
+                        </div>
+
+                        <h3>
+                            Task History
+                        </h3>
+
+                        <p>
+                            View previous task records.
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- RECENT TASKS -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        Recent Tasks
+                    </h2>
+
+                    <a href="task-history.html"
+                       class="view-all">
+
+                        View All →
+
+                    </a>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Task
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Deadline
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Consequence
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="taskTableBody">
+
+                            <!-- Tasks will appear here -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/task.js"></script>
+
+    <script src="../js/teacher.js"></script>
+
+    <script src="../js/login.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head >
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Login</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <!-- Login CSS -->
+    <link rel="stylesheet"
+          href="../css/login.css">
+
+
+</head>
+
+
+<body>
+
+    <!-- LOGIN PAGE -->
+
+    <main class="login-page">
+
+        <div class="login-box">
+
+            <!-- ICON -->
+
+            <div class="login-icon">
+                👨‍🏫
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h1>
+                Teacher Login
+            </h1>
+
+            <p class="login-subtitle">
+                Login to Teacher Dashboard
+            </p>
+
+
+            <!-- USER ID -->
+
+            <div class="input-group">
+
+                <label for="teacherUserId">
+                    User ID
+                </label>
+
+                <input
+                    type="text"
+                    id="teacherUserId"
+                    placeholder="Enter User ID"
+                    autocomplete="username"
+                >
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="input-group">
+
+                <label for="teacherPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="teacherPassword"
+                    placeholder="Enter Password"
+                    autocomplete="current-password"
+                >
+
+            </div>
+
+
+            <!-- LOGIN BUTTON -->
+
+            <button
+                type="button"
+                class="login-btn"
+                onclick="teacherLogin()">
+
+                LOGIN
+
+            </button>
+
+
+            <!-- ERROR MESSAGE -->
+
+            <p
+                id="loginMessage"
+                class="login-message">
+            </p>
+
+
+            <!-- NOTE -->
+
+            <p class="login-note">
+                🔒 Authorized Teacher only
+            </p>
+
+
+            <!-- BACK BUTTON -->
+
+            <a
+                href="../index.html"
+                class="back-link">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- LOGIN JAVASCRIPT -->
+
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>
